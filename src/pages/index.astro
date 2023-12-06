@@ -1,9 +1,12 @@
 ---
+import Brands from "../components/Brands.jsx";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-
 ---
 
 <Layout title="Home">
-    <Hero />
+  <Hero />
+  <div class="my-10">
+    <Brands client:load />
+  </div>
 </Layout>
