@@ -3,8 +3,8 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 const brands = [
-  ["amazon.svg", "dribble.svg", "hubspot.svg"],
-  ["netflix.svg", "notion.svg", "zoom.svg"],
+  ["amazon.svg", "dribble.svg", "hubspot.svg","zoom.svg","zoom.svg"],
+  ["netflix.svg", "notion.svg", "zoom.svg","zoom.svg","zoom.svg"],
 ];
 export default function Brand() {
   return (
@@ -13,18 +13,17 @@ export default function Brand() {
         loop
         modules={[Autoplay]}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-          reverseDirection: true,
-        }}
+          delay: 0,
+          disableOnInteraction: false,
+       }}
+       speed="2000"
         className="mb-5"
-        speed={1000} 
         spaceBetween={50}
         slidesPerView={2.2}
         style={{ transitionTimingFunction: 'linear' }}
       >
         {brands[0].map((brand, index) => (
-          <SwiperSlide className="first:ml-5" key={index}>
+          <SwiperSlide key={index}>
             <img src={brand} />
           </SwiperSlide>
         ))}
@@ -32,17 +31,18 @@ export default function Brand() {
       <Swiper
         loop
         style={{ transitionTimingFunction: 'linear' }}
-        speed={1000} 
         modules={[Autoplay]}
+        speed="2000"
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
+          delay: 1,
+          disableOnInteraction: false,
+          reverseDirection: true,
         }}
         spaceBetween={50}
         slidesPerView={2.2}
       >
         {brands[1].map((brand, index) => (
-          <SwiperSlide className="first:ml-5" key={index}>
+          <SwiperSlide className="" key={index}>
             <img src={brand} />
           </SwiperSlide>
         ))}

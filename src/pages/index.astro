@@ -1,5 +1,6 @@
 ---
 import Brands from "../components/Brands.jsx";
+import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -8,5 +9,8 @@ import Layout from "../layouts/Layout.astro";
   <Hero />
   <div class="my-10">
     <Brands client:load />
+  </div>
+  <div class="px-5">
+    <Card />
   </div>
 </Layout>

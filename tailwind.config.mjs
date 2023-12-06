@@ -5,12 +5,16 @@ export default {
     extend: {
       colors: {
         "brand-primary": "#B9FF66",
-        "brand-slate": "#B9FF66",
+        "brand-slate": "#F3F3F3",
         "brand-dark": "#191A23",
       },
       borderRadius: {
-        'btn': '14px'
+        'btn': '14px',
+        '4xl': '2.813rem',
       },
+      padding:{
+        '1.5': '0.438rem'
+      }
     },
     fontFamily: {
       sans: ["Space Grotesk", "VT323", "sans-serif"],
