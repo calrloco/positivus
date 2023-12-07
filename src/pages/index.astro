@@ -3,17 +3,16 @@ import Brands from "../components/Brands.jsx";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
+import SearchEngine from "../components/assets/services/SearchEngine.astro";
+import PayPerClick from "../components/assets/services/PayPerClick.astro";
 import Layout from "../layouts/Layout.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout title="Home">
   <Hero />
-  <div class="my-10">
+  <div class="my-16 md:my-10">
     <Brands client:load />
   </div>
-  <Section title="Services" className="grid gap-4 grid-cols-1 lg:grid-cols-2 md:place-items-start place-items-center" description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:">
-    <Card title="Search engine" subtitle="optimization" />
-    <Card variant="dark" title="Search engine" subtitle="optimization" />
-    <Card variant="primary" title="Search engine" subtitle="optimization" />
-  </Section>
+  <Services />
 </Layout>

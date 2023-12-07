@@ -1,0 +1,38 @@
+---
+import Card from "./Card.astro";
+import Section from "./Section.astro";
+const services = [
+  {
+    title: "Search engine",
+    subtititle: "optimization",
+    card_variant: "",
+    img: "3",
+  },
+  {
+    title: "Pay-per-click",
+    subtititle: "advertising",
+    card_variant: "primary",
+    img: "1",
+  },
+  {
+    title: "Social Media",
+    subtititle: "Marketing",
+    card_variant: "dark",
+    img: "2",
+  },
+  {
+    title: "Social Media",
+    subtititle: "Marketing",
+    img: "4",
+  },
+];
+---
+<Section
+  title="Services"
+  className="grid gap-4 grid-cols-1 lg:grid-cols-2 md:place-items-start place-items-center"
+  description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
+>
+{
+ services.map(service =>   <Card variant={service?.card_variant} title={service.title} subtitle={service.subtititle} img={`/services/${service.img}.png`} />)
+}
+</Section>
