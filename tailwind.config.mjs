@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  safelist: [
+    'bg-brand-primary',
+    'bg-brand-slate',
+    'bg-brand-dark',
+  ],
   theme: {
     extend: {
       colors: {
@@ -14,6 +19,9 @@ export default {
       },
       padding:{
         '1.5': '0.438rem'
+      },
+      boxShadow:{
+        'card':'0px 5px 0px 0px #191A23'
       }
     },
     fontFamily: {

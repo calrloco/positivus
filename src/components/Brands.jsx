@@ -10,31 +10,32 @@ export default function Brand() {
   return (
     <div>
       <Swiper
-        loop
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
+      className="mb-10"
+       loop
+       style={{ transitionTimingFunction: 'cubic-bezier(.29, 1.01, 1, -0.68)' }}
+       modules={[Autoplay]}
+       speed="3000"
+       autoplay={{
+         delay: 1000,
+         disableOnInteraction: false,
+         reverseDirection: false,
        }}
-       speed="2000"
-        className="mb-5"
-        spaceBetween={50}
-        slidesPerView={2.2}
-        style={{ transitionTimingFunction: 'linear' }}
+       spaceBetween={50}
+       slidesPerView={2.2}
       >
         {brands[0].map((brand, index) => (
-          <SwiperSlide key={index}>
-            <img src={brand} />
+          <SwiperSlide className="px-5 flex justify-center" key={index}>
+            <img className="grayscale"  src={brand} />
           </SwiperSlide>
         ))}
       </Swiper>
       <Swiper
         loop
-        style={{ transitionTimingFunction: 'linear' }}
+        style={{ transitionTimingFunction: 'cubic-bezier(.29, 1.01, 1, -0.68)' }}
         modules={[Autoplay]}
-        speed="2000"
+        speed="3000"
         autoplay={{
-          delay: 1,
+          delay: 1000,
           disableOnInteraction: false,
           reverseDirection: true,
         }}
@@ -42,8 +43,8 @@ export default function Brand() {
         slidesPerView={2.2}
       >
         {brands[1].map((brand, index) => (
-          <SwiperSlide className="" key={index}>
-            <img src={brand} />
+          <SwiperSlide className="px-5" key={index}>
+            <img className="grayscale" src={brand} />
           </SwiperSlide>
         ))}
       </Swiper>

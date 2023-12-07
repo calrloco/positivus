@@ -2,6 +2,7 @@
 import Brands from "../components/Brands.jsx";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -10,7 +11,9 @@ import Layout from "../layouts/Layout.astro";
   <div class="my-10">
     <Brands client:load />
   </div>
-  <div class="px-5">
-    <Card />
-  </div>
+  <Section title="Services" className="grid gap-4 grid-cols-1 lg:grid-cols-2 md:place-items-start place-items-center" description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:">
+    <Card title="Search engine" subtitle="optimization" />
+    <Card variant="dark" title="Search engine" subtitle="optimization" />
+    <Card variant="primary" title="Search engine" subtitle="optimization" />
+  </Section>
 </Layout>
