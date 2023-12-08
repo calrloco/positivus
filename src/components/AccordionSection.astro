@@ -1,0 +1,38 @@
+---
+import Collapse from "./Collapse.astro";
+const items = [
+  {
+    label: "Consultation",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    label: "Research and Development",
+    content:
+      "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+];
+---
+
+<div class="px-5 lg:px-24 my-14 space-y-10">
+  {
+    items.map((item, key) => (
+      <Collapse label={item.label} index={key + 1}>
+        {item.content}
+      </Collapse>
+    ))
+  }
+</div>
+<style lang="postcss">
+    .accodion-chevron::after{
+        content: "";
+        @apply h-[70%] w-[8px] transform transition-transform  bg-brand-dark absolute left-1/2 -translate-x-1/2;
+    }
+    .accodion-chevron::before{
+        content: "";
+        @apply h-[70%] w-[8px] rotate-90 transform bg-brand-dark absolute left-1/2 -translate-x-1/2;
+    }
+    .group:focus-within .accodion-chevron::after {
+        @apply rotate-90;
+    }
+</style>
