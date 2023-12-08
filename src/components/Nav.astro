@@ -1,10 +1,33 @@
 ---
 import Logo from "./assets/Logo.astro";
+import Button from "./Button.astro";
+const navItems = [
+  {
+    label: "About us",
+    href: "#",
+  },
+  {
+    label: "Services",
+    href: "#",
+  },
+  {
+    label: "Use cases",
+    href: "#",
+  },
+  {
+    label: "Pricing",
+    href: "#",
+  },
+  {
+    label: "Blog",
+    href: "#",
+  },
+];
 ---
 
 <nav class="flex justify-between w-full items-center px-5 lg:px-24 pt-10">
   <Logo />
-  <div class="">
+  <div class="md:hidden">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="26"
@@ -28,5 +51,15 @@ import Logo from "./assets/Logo.astro";
         stroke-width="2"
         stroke-linecap="round"></path>
     </svg>
+  </div>
+  <div class="hidden md:flex gap-10 items-center	justify-between">
+    {
+      navItems.map(({ href, label }) => (
+        <a {href} class="capitalize">
+          {label}
+        </a>
+      ))
+    }
+    <Button className="bg-white hover:bg-brand-dark  hover:text-white transition-colors border border-brand-dark text-brand-dark px-9 py-3">Request a quote</Button>
   </div>
 </nav>

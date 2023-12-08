@@ -14,25 +14,14 @@ const items = [
 ];
 ---
 
-<div class="px-5 lg:px-24 my-14 space-y-10">
-  {
-    items.map((item, key) => (
-      <Collapse label={item.label} index={key + 1}>
-        {item.content}
-      </Collapse>
-    ))
-  }
+<div class="px-5 md:px-24">
+  <div class="space-y-10">
+    {
+      items.map((item, key) => (
+        <Collapse label={item.label} index={key + 1}>
+          {item.content}
+        </Collapse>
+      ))
+    }
+  </div>
 </div>
-<style lang="postcss">
-    .accodion-chevron::after{
-        content: "";
-        @apply h-[70%] w-[8px] transform transition-transform  bg-brand-dark absolute left-1/2 -translate-x-1/2;
-    }
-    .accodion-chevron::before{
-        content: "";
-        @apply h-[70%] w-[8px] rotate-90 transform bg-brand-dark absolute left-1/2 -translate-x-1/2;
-    }
-    .group:focus-within .accodion-chevron::after {
-        @apply rotate-90;
-    }
-</style>

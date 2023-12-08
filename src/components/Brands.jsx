@@ -8,7 +8,7 @@ const brands = [
 ];
 export default function Brand() {
   return (
-    <div>
+    <div className="">
       <Swiper
       className="mb-10"
        loop

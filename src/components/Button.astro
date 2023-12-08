@@ -1,8 +1,8 @@
 ---
 import { twMerge } from 'tailwind-merge'
-const {  className = ""} = Astro.props as {className: string;};
+const {  className = "", href = '#'} = Astro.props as {className: string,href:string};
 ---
 
-<button class={twMerge('bg-brand-dark cursor-pointer rounded-btn text-white text-xl py-5 px-9', className)}>
+<a {href} class={twMerge('bg-brand-dark flex justify-center items-center cursor-pointer rounded-btn text-white text-xl py-5 px-9', className)}>
     <slot  />
-</button>
+</a>
