@@ -3,12 +3,12 @@ import { twMerge } from "tailwind-merge";
 const { title, description, className = "" } = Astro.props;
 ---
 
-<section class="p-5">
-  <div class="grid place-items-center gap-5 mb-10 md:flex md:place-items-start">
+<section class="p-5 md:p-24">
+  <div class="grid place-items-center gap-5 mb-10 md:flex">
     <span class="text-3xl px-1.5 font-medium bg-brand-primary rounded-md"
       >{title}</span
     >
-    <p class="text-center md:text-start md:text-sm">{description}</p>
+    <p class="text-center md:text-start md:text-sm lg:w-1/3">{description}</p>
   </div>
   <div class={className}>
     <slot />

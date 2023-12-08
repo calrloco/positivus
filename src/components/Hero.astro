@@ -1,10 +1,11 @@
 ---
 import HeroImage from "./assets/HeroImage.astro";
+import Button from "./Button.astro";
 ---
 
-<div class="px-5">
+<div class="px-5 lg:p-24">
   <div class="md:space-x-0 space-y-5 md:grid grid-cols-2 my-16">
-    <div class="grid place-content-center md:gap-y-9">
+    <div class="grid  md:gap-y-9">
       <h1 class="text-[43px] font-medium">
         Navigating the <br /> digital landscape <br /> for success
       </h1>
@@ -13,12 +14,12 @@ import HeroImage from "./assets/HeroImage.astro";
         through a range of services including SEO, PPC, social media marketing,
         and content creation.
       </p>
-      <div class="">
-        <button
-          class="bg-brand-dark cursor-pointer hidden md:block rounded-btn text-white text-xl py-5 px-9"
-          >Book a consultation</button
+  
+        <Button
+          className="hidden md:block"
+          >Book a consultation</Button
         >
-      </div>
+   
     </div>
     <div class="grid place-items-center">
       <HeroImage />
@@ -29,8 +30,8 @@ import HeroImage from "./assets/HeroImage.astro";
       and content creation.
     </p>
   </div>
-  <button
-    class="bg-brand-dark cursor-pointer md:hidden rounded-btn w-full text-white text-xl py-5 px-9"
-    >Book a consultation</button
+  <Button
+    className="bg-brand-dark cursor-pointer md:hidden rounded-btn w-full text-white text-xl py-5 px-9"
+    >Book a consultation</Button
   >
 </div>

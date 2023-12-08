@@ -21,7 +21,7 @@ export default function Brand() {
          reverseDirection: false,
        }}
        spaceBetween={50}
-       slidesPerView={2.2}
+       slidesPerView={2}
       >
         {brands[0].map((brand, index) => (
           <SwiperSlide className="px-5 flex justify-center" key={index}>
@@ -40,7 +40,7 @@ export default function Brand() {
           reverseDirection: true,
         }}
         spaceBetween={50}
-        slidesPerView={2.2}
+        slidesPerView={2}
       >
         {brands[1].map((brand, index) => (
           <SwiperSlide className="px-5" key={index}>

@@ -29,10 +29,10 @@ const services = [
 ---
 <Section
   title="Services"
-  className="grid gap-4 grid-cols-1 lg:grid-cols-2 md:place-items-start place-items-center"
+  className="grid gap-4 lg:gap-10 grid-cols-1 lg:grid-cols-2 md:place-items-start place-items-center"
   description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
 >
 {
- services.map(service =>   <Card variant={service?.card_variant} title={service.title} subtitle={service.subtititle} img={`/services/${service.img}.png`} />)
+ services.map(service =>   <Card className="w-full" variant={service?.card_variant} title={service.title} subtitle={service.subtititle} img={`/services/${service.img}.png`} />)
 }
 </Section>

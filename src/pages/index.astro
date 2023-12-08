@@ -1,12 +1,9 @@
 ---
 import Brands from "../components/Brands.jsx";
-import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
-import Section from "../components/Section.astro";
-import SearchEngine from "../components/assets/services/SearchEngine.astro";
-import PayPerClick from "../components/assets/services/PayPerClick.astro";
 import Layout from "../layouts/Layout.astro";
 import Services from "../components/Services.astro";
+import Cta from "../components/Cta.astro";
 ---
 
 <Layout title="Home">
@@ -15,4 +12,5 @@ import Services from "../components/Services.astro";
     <Brands client:load />
   </div>
   <Services />
+  <Cta />
 </Layout>
