@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "./assets/Logo"; // Make sure your Logo component is React-compatible
 
-const navItems = [
+export const navItems = [
   {
     label: "About us",
     href: "#",
@@ -66,12 +66,12 @@ export default function Nav() {
               {label}
             </a>
           ))}
-          <button className="bg-white hover:bg-brand-dark hover:text-white transition-colors border border-brand-dark text-brand-dark px-9 py-">
+          <button className="bg-white py-3 rounded-md hover:bg-brand-dark hover:text-white transition-colors border border-brand-dark text-brand-dark px-9 py-">
             Request a quote
           </button>
         </div>
       </div>
-      <div className={`${menuOpen ? '' : 'hidden'} flex flex-col gap-3 border-b-brand-primary border-b-2 py-10 px-5 lg:p-24`}>
+      <div className={`${menuOpen ? '' : 'hidden'} flex flex-col gap-3 border-b-brand-dark border-b-2 py-10 px-5 lg:p-24`}>
         {navItems.map(({ href, label }, index) => (
           <a key={index} href={href} className="capitalize">
             {label}

@@ -1,0 +1,47 @@
+---
+import Logo from "./assets/Logo";
+import Button from "./Button.astro";
+import { navItems } from "./Nav";
+---
+
+<footer class="bg-brand-dark text-white p-5 md:p-24 py-20 grid gap-9">
+  <div class="grid gap-y-9 place-items-center">
+    <Logo />
+    <div class="grid gap-3.5">
+      {
+        navItems.map(({ href, label }, index) => (
+          <a href={href} class="text-center capitalize">
+            {label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="grid place-items-center gap-y-9">
+    <p
+      class="text-lg text-brand-dark px-1.5 font-medium bg-brand-primary rounded-md"
+    >
+      Contact us:
+    </p>
+    <div class="grid gap-3.5 text-center">
+      <a href="mailto:test@test.test">Email: info@positivus.com</a>
+      <a href="tel:123-456-7890-00">Phone: 555-567-8901</a>
+      <div>
+        Address: 1234 Main St <br>
+        Moonstone City, Stardust State 12345
+      </div>
+    </div>
+  </div>
+  <div class=" bg-[#292A32] rounded-[14px] p-10 md:p-12 grid gap-6">
+    <input>
+    <Button className="bg-brand-primary text-brand-dark">Stay updated</Button>
+  </div>
+  <div class="grid gap-y-9">
+    <div class="flex gap-5 items-center justify-center">1 2 3</div>
+    <div class="h-[1px] w-full   bg-brand-slate"></div>
+    <div class="text-center grid gap-4">
+       <p> © 2023 Positivus. All Rights Reserved.</p>
+       <p> Privacy Policy</p>
+    </div>
+  </div>
+</footer>
